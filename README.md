@@ -6,6 +6,14 @@ create firewall rules
 git clone repository in instance-1 vscode
 SSH setup for instance-1 and installed docker, ansible and python
 create ansible folder
+create roles folder in ansible and use code "ansible-galaxy init *docker*" to create roles file structure with:
+- docker 
+- docker-compose
+- jenkins
+- nginx
+- python
+- swarm-manager
+- swarm-worker
 
 
 SSH
