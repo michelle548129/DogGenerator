@@ -11,7 +11,7 @@ class TestBase(TestCase):
         return app
     
     def setUp(self):
-        sample_result = results(animal='cat', noise='meow')
+        sample_result = results(breed='chihuahua', name='Browny')
         db.create_all()
         db.session.add(sample_result)
         db.session.commit()
@@ -23,9 +23,9 @@ class TestBase(TestCase):
 class TestView(TestBase):
     def test_get_frontend(self):
         with requests_mock.Mocker() as m:
-            m.get('http://animal-api:5000/get-animal', json={"animal":"dog"})
-            m.post('http://noise-api:5000/noise', json={"noise":"woof"})
+            m.get('http://breed-api:5000/get-breed', json={"breed":"chihuahua"})
+            m.post('http://name-api:5000/noise', json={"name":"Browny"})
             response = self.client.get(url_for('index'))
             self.assert200(response)
-            self.assertIn(b'cat goes meow', response.data)
-            self.assertIn(b'dog goes woof', response.data)
+            self.assertIn(b'rottweiler goes Boston', response.data)
+            self.assertIn(b'chihuahua goes Browny', response.data)
