@@ -12,8 +12,8 @@ pipeline {
             }
             steps {
                 sh "/bin/bash -c 'docker rmi -f \$(docker images -q)'"
-                sh "docker login -u ${DOCKER_CREDS_USR} -p ${DOCKER_CREDS_PSW}"
                 sh "docker-compose build --parallel"
+                sh "docker login -u ${DOCKER_CREDS_USR} -p ${DOCKER_CREDS_PSW}"
                 sh "docker-compose push"
             }
         }
