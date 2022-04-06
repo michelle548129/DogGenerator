@@ -15,6 +15,12 @@ create roles folder in ansible and use code "ansible-galaxy init *docker*" to cr
 - swarm-manager
 - swarm-worker
 
+edited playbook.yml and inventory.yml
+edited main.yml in tasks folder of every folder in roles
+create new user and add it to visudo. Add instance-1 ssh to authorized_keys
+
+installed jenkins and created a new item as a pipeline project
+
 
 SSH
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMZ05IvEvkHYtkwvE6u973hQW56HfBJ8b8SbWjkQTwb+xMolf92b4sUcLr0OMVn6Rkuz9tvmG2vtkb2iGJeoJqMsGjKs9GXzblsGcQbjFzVm+HRyAjhW6eSV+CrGB4TqY5hWxsOzaX5cEA7jo3FrpxueQ3r3BOE2KDBZMrQ1NPMjl2taSTHNUqqTNFXzeCSxgU+BESaEPYUl/3br4heW5ie4FpQzPG5QwGuX+acO+mY8lxu7AX7Hv/r2Kz827bI529f436gVAQgT+jaHQb9XUdVk/K3TiMn7P7e/zCpV6ocVW/oi6UPWFDZAqzl2x/wVbEiGJZfzN+FoRfCpZoyKKt5BcZteKv+Ni99rNe+BDQdfTTX8Kqd5eoHr73p5wADtUwOg0x5TwBqWpMO9Ef5ZU4Fb5DX70qX5/C/arR+mS7TI400pxjCWIg6YDGcRWq7SsXEdSErW7g2qpCY88BEEejxR0CcKGVXL8+8r2H6QuS8g1na8gDRxspCNUCgOL0JG9y/TZP7MgmrKA/ecTqUMX/KHxLG+uEhDfLHMQSesB+5AuOabMGqqR1WSW6Sy0XWY8jbXBcQEQo7ai4B7uKqXFbwAFQ40TPYnEwNg9fhuowOTADN+1lsGi0HeJkpVzZKtTHmwKdC7bhaer6x4Ln3lCqdtedk1yLydYcNR7PxLsAzw== fiercepc@Michelle-Gaming-PC
@@ -22,3 +28,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMZ05IvEvkHYtkwvE6u973hQW56HfBJ8b8SbWjkQTw
 
 ssh for instance-1
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDbZg0cIdHtT8zirMwLAQWXSm1V+aTFsONj04QlUeTWseUdDmUzborMKwr0lnmBsMLSPna/pgcGOGRgQHDfoyyJBMi0H3QCQKE7RBLd1UiRl5ciVapITObG3VWna/fmy6EX7vFlZwcLQ2G14ww8RiRsg3s6mylDrE4KGMxZuEw7cPzs6Mttbz+lS9tDl13fAvIe6iBoiGSSfy/FSkrNB9y6BnaMqyg0nAIflngt94+za/I1F0G0sEzRHK2/qjnEnHg872qZ7uCYkhTZMuaA7CQlvtu9O9uy9Sy5guxBVxFeSL52yV9XgdKEo95zLde3WTwd88kgPJ8U/47ePFx1noQub9B5gKqTV+szN45b90Mwbv+Y/BDa+QrGgflG5NSpLI2HkYjfVMRtseoc2lA0Juxdz9PvMQ6WOYOJSUtqVW6A1IEu7ldzwMMnQkrZNrUAX9/QRDSnUTWfBW2Y8xWQXxUUP07qW55F8XXIHS1r8E2JsY0moxYXnve06nV7sEGpHIk= smellyshelly269@instance-1
+
+jenkins password: cacd2488ab8b407aa789b3b7bd0c4283
+jenkins link: http://35.197.254.246:8080/
