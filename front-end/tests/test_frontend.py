@@ -9,16 +9,6 @@ import application.routes
 class TestBase(TestCase):
     def create_app(self):
         return app
-    
-    def setUp(self):
-        sample_result = results(breed='chihuahua', name='Browny')
-        db.create_all()
-        db.session.add(sample_result)
-        db.session.commit()
-    
-    def tearDown(self):
-        db.session.remove()
-        db.drop_all()
 
 class TestView(TestBase):
     def test_get_frontend(self):
