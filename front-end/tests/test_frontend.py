@@ -1,5 +1,5 @@
 from application import app, db
-from application.models import Results
+from application.models import results
 from flask import url_for
 import requests_mock
 from flask_testing import TestCase
@@ -11,7 +11,7 @@ class TestBase(TestCase):
         return app
     
     def setUp(self):
-        sample_result = Results(animal='cat', noise='meow')
+        sample_result = results(animal='cat', noise='meow')
         db.create_all()
         db.session.add(sample_result)
         db.session.commit()
