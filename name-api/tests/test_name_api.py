@@ -7,12 +7,12 @@ class TestBase(TestCase):
         return app
 
 class TestView(TestBase):
-    def test_get_name_jr(self):
+    def test_get_name_chihuahua(self):
         response = self.client.post(url_for('name'), json={"breed":"chihuahua"})
         self.assert200(response)
         self.assertIn(b'Browny', response.data)
     
-    def test_get_name_r(self):
+    def test_get_name_rottweiler(self):
         response = self.client.post(url_for('name'), json={"breed":"rottweiler"})
         self.assert200(response)
         self.assertIn(b'Boston', response.data)

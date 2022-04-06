@@ -9,15 +9,15 @@ class TestBase(TestCase):
         return app
 
 class TestView(TestBase):
-    @patch('application.routes.choice', return_value='cat')
-    def test_get_animal_cat(self, mock_func):
-        response = self.client.get(url_for('get_animal'))
+    @patch('application.routes.choice', return_value='rottweiler')
+    def test_get_animal_rottweiler(self, mock_func):
+        response = self.client.get(url_for('get_breed'))
         self.assert200(response)
-        self.assertIn(b'cat', response.data)
+        self.assertIn(b'rottweiler', response.data)
     
-    @patch('application.routes.choice', return_value='dog')
-    def test_get_animal_dog(self, mock_func):
-        response = self.client.get(url_for('get_animal'))
+    @patch('application.routes.choice', return_value='chihuahua')
+    def test_get_animal_chihuahua(self, mock_func):
+        response = self.client.get(url_for('get_breed'))
         self.assert200(response)
-        self.assertIn(b'dog', response.data)
+        self.assertIn(b'chihuahua', response.data)
         
