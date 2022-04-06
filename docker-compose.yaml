@@ -1,0 +1,53 @@
+version: "3.3"
+services:
+  mysql:
+    image: michelle548129/breed-name-db:latest
+    build: ./db
+    volumes:
+      - type: volume
+        source: breed-vol
+        target: /var/lib/mysql
+    networks:
+      - "breed-net"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: breeddb
+  front-end:
+    image: michelle548129/doggenerator-front:latest
+    build: ./front-end
+    networks:
+      - "breed-net"
+    depends_on:
+      - "mysql"
+      - "breed-api"
+      - "name-api"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  breed-api:
+    image: michelle548129/breed-api:latest
+    build: ./breed-api
+    networks:
+      - "breed-net"
+  name-api:
+    image: michelle548129/name-api:latest
+    build: ./name-api
+    networks:
+      - "breed-net"
+  nginx:
+    image: nginx:latest
+    ports:
+      - published: 80
+        target: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    networks:
+      - "breed-net"
+    depends_on:
+      - "front-end"
+volumes:
+  breed-vol:
+networks:
+  breed-net:

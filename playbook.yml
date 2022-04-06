@@ -14,7 +14,7 @@
       repo: https://github.com/michelle548129/DogGenerator
       dest: /home/fiercepc/DogGenerator
   vars: 
-    docker_user: fiercepc
+    docker_user: michelle
 
 - hosts: ciservers
   become: true
@@ -34,7 +34,7 @@
   tasks:
   - name: add ansible user to docker group
     user:
-      name: fiercepc
+      name: michelle
       groups: docker
       append: yes
   vars:
@@ -46,11 +46,11 @@
   - docker 
   - swarm-worker
   vars:
-    docker_user: fiercepc
+    docker_user: michelle
 
 - hosts: webserver
   become: true
   roles:
   - docker 
   vars:
-    docker_user: fiercepc
+    docker_user: michelle
