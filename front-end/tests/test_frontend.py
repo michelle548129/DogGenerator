@@ -13,9 +13,9 @@ class TestBase(TestCase):
             DEBUG = True
         )
         return app
-        
+
     def setUp(self):
-        sample_result = results(breed='chihuahua', name='Browny')
+        sample_result = results(breed='chihuahua', name='Browny', colour='white')
         db.create_all()
         db.session.add(sample_result)
         db.session.commit()
@@ -29,6 +29,7 @@ class TestView(TestBase):
         with requests_mock.Mocker() as m:
             m.get('http://breed-api:5000/get-breed', json={"breed":"chihuahua"})
             m.post('http://name-api:5000/noise', json={"name":"Browny"})
+            m.post('http://colour-api:5000/colour', json={"colour":"white"})
             response = self.client.get(url_for('index'))
             self.assert200(response)
             self.assertIn(b'rottweiler goes Boston', response.data)
