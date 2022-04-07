@@ -5,16 +5,9 @@
     <body style="background-color: lightblue; font-family: Calibri;">
         <h1>Dog Generator</h1>
         <h2>What dog should you get?</h2>
-        {% for dogbreed in dogbreeds %}
-        {{ dogbreed.__str__() }}
+        {% for dog in dogs %}
+        {{ dog.__str__() }}
         <br>
         {% endfor %}
-
-        <h2>What should you name the dog?</h2>
-        {% for dogname in dognames %}
-        {{ dogname.__str__() }}
-        <br>
-        {% endfor %}
-
     </body>
 </html>

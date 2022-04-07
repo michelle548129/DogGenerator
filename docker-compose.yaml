@@ -21,6 +21,7 @@ services:
       - "mysql"
       - "breed-api"
       - "name-api"
+      - "colour-api"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
   breed-api:
@@ -31,6 +32,11 @@ services:
   name-api:
     image: michelle548129/name-api:latest
     build: ./name-api
+    networks:
+      - "breed-net"
+  colour-api:
+    image: michelle548129/colour-api:latest
+    build: ./colour-api
     networks:
       - "breed-net"
   nginx:
