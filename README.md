@@ -195,8 +195,8 @@ I was able to fix this error later on, despite it having taken up a lot of time.
 
 
 ## Future Work/Improvements
-Future improvements would be to work on the aesthetics of the application. For this project, my main focus was ensuring the application was fully functional and getting the 4 services implemented and working which took up the majority of the time. In the future, I would add CSS to make the websit elook more appealing.
+Future improvements would be to work on the aesthetics of the application. For this project, my main focus was ensuring the application was fully functional and getting the 4 services implemented and working which took up the majority of the time. In the future, I would add CSS to make the website look more appealing.
 
-I would also want to fix the issues brought up in the Jenkins pipeline where the testing failed. I needed more time so that I could fix the testing code and successfully deploy my Jnekins pipeline. 
+I would also want to fix the issues brought up in the Jenkins pipeline where the testing failed. I needed more time so that I could fix the testing code and successfully deploy my Jenkins pipeline. 
 
 
