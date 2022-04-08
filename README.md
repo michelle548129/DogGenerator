@@ -141,7 +141,7 @@ The coverage reports for the 3 api tests are as follows:
 ![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/breedapi%20cov.PNG)
 
 The coverage report for front end is as follows:
-![test.sh](hhttps://github.com/michelle548129/DogGenerator/blob/main/front%20cov.PNG)
+![front cov](https://github.com/michelle548129/DogGenerator/blob/main/front%20cov.PNG)
 
 ## Known Issues
 
