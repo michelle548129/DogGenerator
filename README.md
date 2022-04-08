@@ -78,26 +78,9 @@ To complete the above, I would need to do:
 The aim was to create an application that 
 The framework for my project can be seen below:
 
-![framework](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/framework.PNG) 
-
-
-## ERD
-The Entity relationship diagram helped me plan out the tables I was to create in my database and outline the relationships between them. This was then helpful when creating the database tables in MySQL Workbench , assigning primary and foreign keys and also knowing what columns each table consisted of.  
-The screenshot below shows the ERD I created for my Candy shop application.
-
-![ERD](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/ERD.PNG)
-
-As seen in the ERD, I have created three tables: item, purchase and user. 
-The user table will consist of the fields: username, email and address.
-The item table will consist of the fields: item_name, price, description and quantity.
-The purchase table will consist of the fields: fk_user_id and fk_item_id. 
-For each field, I have given it a data type of either int, varchar or dec and written NOT NULL so that the fields can't be left empty.
-The user table has a one to many relationship with item and purchase. 
-The purchase table has a one to many relationship with item.
-
 ## CI Pipeline
-The CI Pipeline consists of: project tracking, version control, development environment and build server. Below is the diagram of my complete CI Pipeline. 
-
+The CI Pipeline consists of: 
+-  
 ![CI Pipeline](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/CI.PNG)
 
 ### Project Tracking
@@ -162,7 +145,7 @@ Here is a screenshot of the item table I created:
 I created a risk assessment for possible hazards that can occur and how I could overcome them. It's important to analyse these situations and be prepared for them as well as have a plan for them so that when a hazard occurs, it can be easily overcome. It's also helpful to think of ways to prevent these hazards in advance to minimise the risk of them occuring. 
 As you can see, when the control and response measures are put into place, the likelihood of these hazards occuring or the affect they'll have will drastically descrease. 
 
-![Image showing the Risk Assessment Table](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Risk%20Assessment.PNG)
+![Image showing the Risk Assessment Table](https://github.com/michelle548129/DogGenerator/blob/main/Risk%20Assessment.PNG)
 
 
 ## Testing
