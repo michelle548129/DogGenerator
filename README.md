@@ -78,7 +78,7 @@ The entire Jira board can be found here: https://michelle548129.atlassian.net/ji
 My burndown chart is shown below:
 
 
-![Burndown chart](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Burndown%20chart.PNG)
+![Burndown chart](https://github.com/michelle548129/DogGenerator/blob/main/Burndown%20chart.PNG)
 
 
 ## Version Control
@@ -141,7 +141,7 @@ My service 2 is my breed API. It randomly generates the dogs breed when Service 
 My service 3 is my name API. It randomly generates the dogs name when Service 1 sends out a GET request. 
 
 ### Service 4:
-My service 4 is type API where it provides the user with a characteristic of the dog whether it be colour, type of hair or personality. 
+My service 4 is type API where it provides the user with a characteristic of the dog whether it be colour, type of hair or personality. This service sends out a POST request which creates an object that is based on the random objects generated in Service 2 and 3. 
 An nginx instance was created as a loadbalancer so that too much traffic wasn't being sent to just one instance and the traffic would instad be split between the two.  
 
 ## Rolling Updates
