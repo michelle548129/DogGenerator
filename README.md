@@ -78,31 +78,26 @@ To complete the above, I would need to do:
 The aim was to create an application that 
 The framework for my project can be seen below:
 
-## CI Pipeline
-The CI Pipeline consists of: 
--  
-![CI Pipeline](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/CI.PNG)
-
 ### Project Tracking
 Due to this being a rather complex project, I knew it was common sense to use best practices when it comes to project tracking, and would use a software to help me plan out the tasks as needed. To this end, I decided to use Jira as it is a tool I have used ever since my first project and find it a valuable and trusted tool to help me map out my project and all the issues and to-dos that will no doubt crop up.
 
 I decided to employ the use of a KanBan-style board as it is rather helpful and helps me use the software to its full potential for me. Below is a Sprint in action. I also employed the traditional style of user stories often used as a standard in the industry, as well as stories from a developer perspective.
 
-![As-a-user] 
+![As-a-user](https://github.com/michelle548129/DogGenerator/blob/main/As-a-user.PNG)
 
 
-![As-a-developer]
+![As-a-developer](https://github.com/michelle548129/DogGenerator/blob/main/As-a-developer.PNG)
 
 
 The picture below shows the Jira roadmap with various dates timelines and progress tracking set up.
 
-![Jira Roadmap](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Jira%20Roadmap.PNG)
+![Jira Roadmap](https://github.com/michelle548129/DogGenerator/blob/main/Jira%20Roadmap2.PNG)
 
 The picture below shows the Jira Board.
 
-![Jira Board](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Jira%20Board.PNG)  
+![Jira Board](https://github.com/michelle548129/DogGenerator/blob/main/jira%20board.PNG)  
 
-The entire Jira board can be found here: https://michelle548129.atlassian.net/jira/software/projects/DG/boards/4/roadmap
+The entire Jira board can be found here: https://michelle548129.atlassian.net/jira/software/projects/DG/boards/4
 
 My burndown chart is shown below:
 
