@@ -177,6 +177,7 @@ The coverage report for front end is as follows:
 
 ![Testing report](https://github.com/michelle548129/DogGenerator/blob/main/connection%20fail.PNG) 
 
+
 ![Jenkins build failed](https://github.com/michelle548129/DogGenerator/blob/main/jenkins%20fail.PNG)
 
 
@@ -187,7 +188,10 @@ I couldn't get my Jenkins to build successfully becuase I had trouble connecting
 ![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/error%20fixed.PNG)
 
 
-I was able to fix this error later on, despite it having taken up a lot of time.
+I was able to fix this error later on, despite it having taken up a lot of time. The jenkins pipeline now builds successfully as shown below.
+
+
+![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/jenkins%20pass.PNG)
 
 
 ## Future Work/Improvements
