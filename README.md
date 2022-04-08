@@ -52,7 +52,9 @@ Due to this being a rather complex project, I knew it was common sense to use be
 
 I decided to employ the use of a KanBan-style board as it is rather helpful and helps me use the software to its full potential for me. Below is a Sprint in action. I also employed the traditional style of user stories often used as a standard in the industry, as well as stories from a developer perspective.
 
+
 ![As-a-user](https://github.com/michelle548129/DogGenerator/blob/main/As-a-user.PNG)
+
 
 
 ![As-a-developer](https://github.com/michelle548129/DogGenerator/blob/main/As-a-developer.PNG)
@@ -60,17 +62,24 @@ I decided to employ the use of a KanBan-style board as it is rather helpful and 
 
 The picture below shows the Jira roadmap with various dates timelines and progress tracking set up.
 
+
 ![Jira Roadmap](https://github.com/michelle548129/DogGenerator/blob/main/Jira%20Roadmap2.PNG)
+
 
 The picture below shows the Jira Board.
 
+
 ![Jira Board](https://github.com/michelle548129/DogGenerator/blob/main/jira%20board.PNG)  
+
 
 The entire Jira board can be found here: https://michelle548129.atlassian.net/jira/software/projects/DG/boards/4
 
+
 My burndown chart is shown below:
 
+
 ![Burndown chart](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Burndown%20chart.PNG)
+
 
 ## Version Control
 For my Version Control, I used Git, which I am very familiar with at this point. I created a new repository, along with all the required webhooks, tokens and integrations needed to ensure the success of the project. My repository can be found at: https://github.com/michelle548129/DogGenerator
@@ -79,9 +88,12 @@ I used Git so that I could continuously push my work to a remote repository, whe
 
 The network diagram below shows all the commits made and the main,dev and feature branch. As you can see, I was mainly working on the feature branch and commiting there, then when the code worked, I pushed it onto dev then main. At times, I had to push from dev onto main as well in order for me to run the Jenkins pipeline successfully.
 
+
 ![Image showing the network diagram](https://github.com/michelle548129/DogGenerator/blob/main/network%20graph.PNG)
+
  
 ![Image showing the network diagram](https://github.com/michelle548129/DogGenerator/blob/main/webhook.PNG)
+
 
 ## Build Server
 For my build server, I used Jenkins which allowed my project to be built and tested automatically. First, I created a new firewall rule on Google Cloud Platform. I then created a new instance and used the external IP address to run Jenkins on my broswer. I had to initiate an SSH connection to the VM and get the Admin password through there so that I could get through to Jenkins, make an account and create a freestyle project.
@@ -93,17 +105,22 @@ During this project, I once again just used Jenkins as I had become familiar wit
 ![Initiating SSH connection to VM](https://github.com/michelle548129/DogGenerator/blob/main/ssh%20to%20vm.PNG)
 ![Getting Admin password for Jenkins](https://github.com/michelle548129/DogGenerator/blob/main/adminpassword.PNG)
 
+
 Below are some screenshots of the directory and the folders/ files I had created for this project in Visual Studio Code. 
+
 
 ![Creating firewall rule](https://github.com/michelle548129/DogGenerator/blob/main/ansible%20roles.PNG)
 ![Creating Jenkins instance](https://github.com/michelle548129/DogGenerator/blob/main/Front-end%20service.PNG)
 ![Initiating SSH connection to VM](https://github.com/michelle548129/DogGenerator/blob/main/important%20application%20files%20and%20docker%20yaml%20etc.PNG)
 
+
 ## Risk Assessment
 I created a risk assessment for possible hazards that can occur and how I could overcome them. It's important to analyse these situations and be prepared for them as well as have a plan for them so that when a hazard occurs, it can be easily overcome. It's also helpful to think of ways to prevent these hazards in advance to minimise the risk of them occuring. 
 As you can see, when the control and response measures are put into place, the likelihood of these hazards occuring or the affect they'll have will drastically descrease. 
 
+
 ![Image showing the Risk Assessment Table](https://github.com/michelle548129/DogGenerator/blob/main/Risk%20Assessment.PNG)
+
 
 ## The Application
 I created a dog generator that tells a user what dog they should get. It prints out the dog breed, what the dog sohuld be called and the characteristic of the dog. It's randomly generated so the user is always printed a different result.  
@@ -112,7 +129,10 @@ I created a dog generator that tells a user what dog they should get. It prints 
 This is the front end of the application that is visible to the user. This is where they'll see the random generator printing th eoutput of what dog th euser should get next. A http request is sent to the other three services. The result of what's randomly generated is stored in a mysql database container. From the database, the previous results are also displayed to the user. 
 
 Here is the front end of the application:
+
+
 ![List of items](https://github.com/michelle548129/DogGenerator/blob/main/Application%20in%20action%20with%20random%20generated%20outputs.PNG)
+
 
 ### Service 2:
 My service 2 is my breed API. It randomly generates the dogs breed when Service 1 sends out a GET request. 
@@ -127,7 +147,9 @@ An nginx instance was created as a loadbalancer so that too much traffic wasn't 
 ## Rolling Updates
 I made an update to change the background colour of the application from blue to red. When refreshed, the application then changed with it.
 
+
 ![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/update.PNG)
+
 
 ## Testing
 After creating the application, I had to test it to make sure that everything was working and was fully functional. This would prevent errors being thrown to the user later down the line when the application is being used. The tests were made to check:
@@ -135,13 +157,21 @@ After creating the application, I had to test it to make sure that everything wa
 - whether data was being stored in the database correctly
 - whether the right output was being printed
 
+
 ![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/test.PNG)
 
+
 The coverage reports for the 3 api tests are as follows:
+
+
 ![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/breedapi%20cov.PNG)
 
+
 The coverage report for front end is as follows:
+
+
 ![front cov](https://github.com/michelle548129/DogGenerator/blob/main/front%20cov.PNG)
+
 
 ## Known Issues
 
@@ -149,10 +179,13 @@ The coverage report for front end is as follows:
 
 ![Jenkins build failed](https://github.com/michelle548129/DogGenerator/blob/main/jenkins%20fail.PNG)
 
+
 As shown above, I ran into errors when trying to run the pipeline successfully as it wasn't working. This is something I had trouble completing as I was on a tight deadline too. 
 I couldn't get my Jenkins to build successfully becuase I had trouble connecting swarm manager ssh with jenkins ssh. This was a very vague error which was hard to fix as I wasn't sure what part of the code was wrong or what I had to do with the SSH instances for it to work. 
 
+
 ![test.sh](https://github.com/michelle548129/DogGenerator/blob/main/error%20fixed.PNG)
+
 
 I was able to fix this error later on, despite it having taken up a lot of time.
 
