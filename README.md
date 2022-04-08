@@ -101,10 +101,17 @@ The CI Pipeline consists of: project tracking, version control, development envi
 ![CI Pipeline](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/CI.PNG)
 
 ### Project Tracking
-To track and manage my project, I used Jira. I had to create user stories of everything that would be needed in my project and put them under Epics. I created four epics: planning, database, coding in Python using Flask and Testing. All the user stories are stored in the product backlog and were moved to each sprint when they needed to be completed.
-I created sprints and put individual deadlines so that i can manage my time better and make sure to get the entire project done on time. Once a sprint was complete, I would create a new one with the user stories that need to be completed next. 
+Due to this being a rather complex project, I knew it was common sense to use best practices when it comes to project tracking, and would use a software to help me plan out the tasks as needed. To this end, I decided to use Jira as it is a tool I have used ever since my first project and find it a valuable and trusted tool to help me map out my project and all the issues and to-dos that will no doubt crop up.
 
-The picture below shows the Jira roadmap.
+I decided to employ the use of a KanBan-style board as it is rather helpful and helps me use the software to its full potential for me. Below is a Sprint in action. I also employed the traditional style of user stories often used as a standard in the industry, as well as stories from a developer perspective.
+
+![As-a-user] 
+
+
+![As-a-developer]
+
+
+The picture below shows the Jira roadmap with various dates timelines and progress tracking set up.
 
 ![Jira Roadmap](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Jira%20Roadmap.PNG)
 
@@ -112,16 +119,16 @@ The picture below shows the Jira Board.
 
 ![Jira Board](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Jira%20Board.PNG)  
 
-The entire Jira board can be found here: https://michelle548129.atlassian.net/jira/software/projects/CS/boards/3
+The entire Jira board can be found here: https://michelle548129.atlassian.net/jira/software/projects/DG/boards/4/roadmap
 
 My burndown chart is shown below:
 
-![Burndownn chart](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Burndown%20chart.PNG)
+![Burndown chart](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/Burndown%20chart.PNG)
 
 ### Version Control
-I used Git for my Version Control. I created a new repositiory on GitHub for this project. The repo can be found here: https://github.com/michelle548129/TheImpossibleQuiz.git
-I used Git so that I could continually commit my work there and be able to pull previous versions if needed. This came in handy when the code stopped working due to an error, so the previous code could be pulled from git.
-I created a dev branch so that new code could be written and run there first. Once it was working and fully functional, it was pushed onto the main. This prevented me from only using main and having a bunch of errors that prevented my application from running. Anything that was pushed onto main was working at all times. The dev branch was essentially my 'testing' branch where I could figure out how to implement different functions.
+For my Version Control, I used Git, which I am very familiar with at this point. I created a new repository, along with all the required webhooks, tokens and integrations needed to ensure the success of the project. My repository can be found at: https://github.com/michelle548129/DogGenerator
+
+I used Git so that I could continuously push my work to a remote repository, where I knew the code would be safe if anything were to happen to my local machine. I also employed the use of a dev branch, and carrying on from my last project and learning from my mistakes, this time I also used an additional "Feature" branch. I found this particularly helpful as I could test out a lot of things on the feature branch that were experimental, and if I resolved bugs I could push them to dev, and if there was a fully working copy I could then merge by creating a pull request to the main branch. This also gave me additional peace of mind were anything to go wrong, as I knew I could revert to a previous commit or pull data down from a more stable branch if, when and as needed.
 
 The network diagram below shows all the commits made and the main and dev branch. As you can see, I was mainly working on the dev branch and commiting there, then when the code worked, I pushed it onto main. 
 
@@ -130,6 +137,8 @@ The network diagram below shows all the commits made and the main and dev branch
 
 ### Build Server
 For my build server, I used Jenkins which allowed my project to be built and tested automatically. First, I created a new firewall rule on Google Cloud Platform. I then created a new instance and used the external IP address to run Jenkins on my broswer. I had to initiate an SSH connection to the VM and get the Admin password through there so that I could get through to Jenkins, make an account and create a freestyle project.
+
+During this project, I once again just Jenkins as I had become familiar with its uses, and as I learnt more about it I realised how invaluable it was going forward and made sure to familiarize myself with its many features and automation tools it provided. I created new firewall rules via GCP's management ui, and then created a new instance, using the external IP address to run Jenkins on my browser. This entailed the use of an SSH connection to the virtual machine, obtaining the Admin password, installing all the default plugins and then proceeding to create a freestyle project which would allow me the freedom of using my own tools and resources to go ahead with the project.
 
 ![Creating firewall rule](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/firewall.PNG)
 ![Creating Jenkins instance](https://github.com/michelle548129/TheImpossibleQuiz/blob/main/jenkins%20instance.PNG)
