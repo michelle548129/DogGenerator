@@ -156,3 +156,4 @@ Future improvements would be to work on the aesthetics of the application. For t
 
 I would also want to fix the issues brought up in the Jenkins pipeline where the testing failed. I needed more time so that I could fix the testing code and successfully deploy my Jnekins pipeline. 
 
+
