@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: breeddb
   front-end:
-    image: michelle548129/doggenerator-front:latest
+    image: michelle548129/doggenerator-front:v2
     build: ./front-end
     networks:
       - "breed-net"
